@@ -4,4 +4,9 @@
     const { Services } = Cu.import('resource://gre/modules/Services.jsm', {});
     const { FileUtils } = Cu.import('resource://gre/modules/FileUtils.jsm', {});
     const { OS } = Cu.import("resource://gre/modules/osfile.jsm", {});
+
+    const log = (aMessage) => {
+	Services.console.logStringMessage(`[forcebrowserextensiondata] ${aMessage}`);
+    };
+
 }
