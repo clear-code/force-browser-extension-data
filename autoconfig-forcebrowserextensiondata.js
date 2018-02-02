@@ -9,4 +9,8 @@
 	Services.console.logStringMessage(`[forcebrowserextensiondata] ${aMessage}`);
     };
 
+    const getDescendantPrefs = (aRoot) => {
+	return Services.prefs.getChildList(aRoot, {}).sort();
+    };
+
 }
