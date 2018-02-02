@@ -1,1 +1,1 @@
-# force-browser-extension-data
+# Force Browser Extension Data
