@@ -28,7 +28,7 @@
 		file.create(Ci.nsIFile.DIRECTORY_TYPE, FileUtils.PERMS_DIRECTORY);
 	    }
 	    file.append('storage.js');
-	    value = getPref(addonPref);
+	    let value = getPref(addonPref);
 	    log("file path:" + file.path);
 	    log("initialize to:" + value);
 	    if (!file.exists()) {
