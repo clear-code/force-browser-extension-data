@@ -16,6 +16,7 @@
     const tryInitializeStorageJs = () => {
 	const prefix = 'extensions.forcebrowserextensiondata.';
 	for (let addonPref of getDescendantPrefs(prefix)) {
+	    log("try to initialize:" + addonPref);
 	    let file = Services.dirsvc.get('ProfD', Ci.nsIFile);
 	    file.append('browser-extension-data');
 	    if (!file.exists()) {
@@ -28,6 +29,8 @@
 	    }
 	    file.append('storage.js');
 	    value = getPref(addonPref);
+	    log("file path:" + file.path);
+	    log("initialize to:" + value);
 	    if (!file.exists()) {
 		OS.File.open(file.path, {create:true}).then (fd => {
 		    fd.close();
